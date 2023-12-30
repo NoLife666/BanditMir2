@@ -3088,6 +3088,7 @@ namespace Server.MirObjects
                         }
 
                         MyGuild.DeleteMember(this, Name);
+                        RemoveBuff(BuffType.Newbie);
                         break;
 
                     case "CREATEGUILD":
