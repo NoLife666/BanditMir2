@@ -501,6 +501,10 @@ namespace Server.MirObjects
             {
                 AddBuff(BuffType.ClearRing, this, 0, new Stats());
             }
+            if (MyGuild != null && MyGuild.Name ==Settings.NewbieGuild)
+            {
+                AddBuff(BuffType.Newbie, this, 0, new Stats { [Stat.ExpRatePercent] = Settings.NewbieExpBuff });
+            }
 
             if (SpecialMode.HasFlag(SpecialItemMode.Skill) && !skill)
             {
