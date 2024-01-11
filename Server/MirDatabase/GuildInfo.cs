@@ -57,7 +57,7 @@ namespace Server.MirDatabase
             if (Name == Settings.NewbieGuild)
             {
                 MemberCap = Settings.NewbieGuildMaxSize;
-                Level = 1;
+                Level = 22;
             }
             else if(Level < Settings.Guild_MembercapList.Count)
             {
