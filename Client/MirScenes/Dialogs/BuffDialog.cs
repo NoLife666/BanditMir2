@@ -270,10 +270,13 @@ namespace Client.MirScenes.Dialogs
                 Size = new Size(44, 34);
             }
         }
-
+         
         public string BuffString(ClientBuff buff)
         {
-            string text = RegexFunctions.SeperateCamelCase(buff.Type.ToString()) + "\n";
+
+  
+
+                string text = RegexFunctions.SeperateCamelCase(buff.Type.ToString()) + "\n";
             bool overridestats = false;
 
             switch (buff.Type)
@@ -338,9 +341,14 @@ namespace Client.MirScenes.Dialogs
                 case BuffType.Blindness:
                     text += "Reduces visibility\n";
                     break;
+                //NewbieGuild BuffType
+                case BuffType.Newbie:
+                    break;
             }
 
-            if (!overridestats)
+            
+
+                if (!overridestats)
             {
                 foreach (var val in buff.Stats.Values)
                 {
@@ -504,6 +512,8 @@ namespace Client.MirScenes.Dialogs
                     return 261;
                 case BuffType.Skill:
                     return 200;
+                case BuffType.Newbie:
+                    return 260;
 
                 //Stats
                 case BuffType.Impact:
